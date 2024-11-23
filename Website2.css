@@ -5,6 +5,9 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 .home-content{
     background: url("Pictures/Yoga4.jpg");
