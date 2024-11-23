@@ -1,0 +1,379 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.home-content{
+    background: url("Pictures/Yoga4.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+.navbar{
+    background: transparent;
+    height: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: absolute;
+}
+
+ .logo p{
+    opacity: 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-size: 2rem;
+    padding-left: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+ }
+
+.navbar-links{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 2rem;
+    transition: all 0.4s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.home-caption{
+    transition: all 1s ease;
+}
+
+.home-caption h3{
+    font-size: 2.7rem;
+    transition: all 1s ease;
+}
+
+.home-caption h5{
+    color: white;
+    font-size: 1rem;
+    transition: all 1s ease;
+}
+
+.menu-caption{
+    display: none;
+}
+
+.navbar-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .home-content{
+        width: 100%;
+    }
+
+    .navbar-menu{
+        display: none;
+    }
+
+    .navbar-links{
+        padding: 0;
+    }
+
+    .navbar-toggle{
+        display: inline;
+        padding-right: 4rem;
+    }
+
+    .navbar-toggle .bar{
+        display: block;
+        background-color: black;
+        width: 32px;
+        height: 3px;
+        margin: 5px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+    }
+
+    #menubar.active :nth-child(2){
+        opacity: 0;
+    }
+
+    #menubar.active :nth-child(1){
+        transform: translateY(8px) rotate(45deg) ;
+    }
+
+    #menubar.active :nth-child(3){
+        transform: translateY(-8px) rotate(-45deg) ;
+    }
+
+    .menu-caption{
+        display: inline;
+    }
+
+
+    .home-caption.active{
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .navbar-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        top: -1000px;
+        width: 100%;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .navbar-menu.active{
+        padding: 0;
+        top: 100%;
+    }
+}
+
+.session-page{
+    width: 100%;
+    padding: 2rem 2.5rem;
+    background-color: khaki;
+}
+
+.session-box{
+    display: flex;
+    flex-direction: column;
+    background-color: khaki;
+}
+
+.session-intro{
+    flex: 1;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+}
+
+.session-intro h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.session-intro p{
+    font-size: 1.4rem;
+}
+
+.session-container{
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.session-type{
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    width: 300px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.team h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.image{
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-details p{
+    font-weight: 200;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.session-type img{
+    width: 100%;
+    height: 100%;
+}
+
+.session-details{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .session-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+
+
+.workout-page{
+    background: url(Pictures/Yoga3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 4rem 6rem;
+    height: 100%;
+}
+
+.workout-intro{
+    padding-bottom: 3rem;
+}
+
+.workout-intro h1{
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(29, 129, 4);
+}
+
+.workout-intro p{
+    color: white;
+    font-size: 20px;
+}
+
+.workout-container{
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(4, 120px);
+}
+
+.workout-text{
+    background-color: khaki;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 1rem;
+}
+
+
+.workout-container :nth-child(2){
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.workout-container :nth-child(3){
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.workout-container :nth-child(4){
+    grid-row: 4/5;
+    grid-column: 3/4;
+}
+
+@media screen and (max-width: 768px){
+
+    .workout-container{
+        background: transparent;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, 120px);
+    }
+
+    .workout-text{
+        padding: 30px 30px;
+        margin: 5px auto;
+    }
+
+    .workout-container :nth-child(2){
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    
+    .workout-container :nth-child(3){
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    
+    .workout-container :nth-child(4){
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .workout-container{
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.about-page{
+    background-color: black;
+}
+
+.about-container{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.about-detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.about-heading h2{
+    color: white;
+}
+
+.about-detail h3{
+    color: white;
+}
+
+.about-detail p{
+    color: white;
+}
+
+.media{
+    display: flex;
+}
+
+.media i{
+    color: white;
+    padding-right: 10px;
+}
+
+@media screen and (max_width: 768px) {
+    .about-detail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
